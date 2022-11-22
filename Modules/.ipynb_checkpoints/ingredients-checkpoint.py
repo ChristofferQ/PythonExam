@@ -39,19 +39,31 @@ def search_for_recipes_by_ingredient():
     for sp in soup.find_all('span', itemprop="name"):
         Keys.append(sp.text)
 
-    Dict = {}
+    ingredientsDict = {}
 
     #Tilføjer vores values og keys til dictionary
     for i in range(len(Keys)):
-        Dict[Keys[i]] = Values[i]
+        ingredientsDict[Keys[i]] = Values[i]
     
-    searchIngredient = Dict[input("Input your ingredient")]
+    #Bruger input til at angive hvilken key vi søger efter, så vi kan sætte dens value som variablen insert_ der bruges efterfølgende til at finde opskrift siden
+    searchIngredient = ingredientsDict[input("Your ingredient: ")]
 
-    insert_ = searchIngredient
+    insert = searchIngredient
 
-    r2 = requests.get('https://www.webopskrifter.dk/' + insert_)
+    r2 = requests.get('https://www.webopskrifter.dk/' + insert)
     r2.raise_for_status()
     soup = bs4.BeautifulSoup(r2.content, 'html.parser')
+    
+    i = 1
 
+    #Printer navnene på opskrifterne med et tilføjet tal foran
     for sp in soup.find_all('span', class_="h3-size"):
-        print(sp.text)
+        print(i, '\t', (sp.text))
+        i+=1
+        
+        
+def get_content_of_recipe():
+    """
+    
+    """
+    
