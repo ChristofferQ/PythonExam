@@ -75,16 +75,17 @@ def search_for_recipes_by_ingredient():
     
     
     #Så vi kan lave en ny input, der bliver til et nyt kald i hjemmeside med url for den valgte opksrift
-    searchRecipe = recipesDict[input("Choose a number")]
+    searchRecipe = recipesDict[1]
     
     r3 = requests.get('https://www.webopskrifter.dk/' + searchRecipe)
     r3.raise_for_status()
     soup = bs4.BeautifulSoup(r3.content, 'html.parser')
     
-    print(soup.prettify())
+    for sp in soup.find_all('li',itemprop="recipeIngredient"):
+        print(sp.text)
         
-def get_content_of_recipe():
-    """
-    
-    """
+    for sp in soup.find_all('div', class_="instructions-text"):
+        print(sp.text)
+        
+
     
