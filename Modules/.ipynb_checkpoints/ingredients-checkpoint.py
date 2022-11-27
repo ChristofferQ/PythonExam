@@ -75,7 +75,9 @@ def search_for_recipes_by_ingredient():
     
     
     #Så vi kan lave en ny input, der bliver til et nyt kald i hjemmeside med url for den valgte opksrift
+    #searchRecipe = recipesDict[input("Her:")]
     searchRecipe = recipesDict[1]
+    
     
     r3 = requests.get('https://www.webopskrifter.dk/' + searchRecipe)
     r3.raise_for_status()
