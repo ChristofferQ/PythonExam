@@ -76,7 +76,7 @@ def search_for_recipes_by_ingredient():
     
     #Så vi kan lave en ny input, der bliver til et nyt kald i hjemmeside med url for den valgte opksrift
     #searchRecipe = recipesDict[input("Her:")]
-    searchRecipe = recipesDict[1]
+    searchRecipe = recipesDict[3]
     
     
     r3 = requests.get('https://www.webopskrifter.dk/' + searchRecipe)
@@ -88,6 +88,10 @@ def search_for_recipes_by_ingredient():
         
     for sp in soup.find_all('div', class_="instructions-text"):
         print(sp.text)
+        
+    #Vi skal gemme ingredienserne i en Dictionary, så vi kan bruge dem til at søge på f.eks. nemlig.com og hente priser 
+    #for de individuelle ingredienser, på den måde kan vi både vise prisen for hver enkelt ingrediens og vise summen af 
+    #hele indkøbet 
         
 
     
