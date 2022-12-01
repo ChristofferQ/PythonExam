@@ -82,7 +82,7 @@ def search_for_recipes_by_ingredient():
     
     #Så vi kan lave en ny input, der bliver til et nyt kald i hjemmeside med url for den valgte opksrift
     #searchRecipe = recipesDict[input("Her:")]
-    searchRecipe = recipesDict[int(input("Your recipe"))]
+    searchRecipe = recipesDict[int(input("Your recipe:"))]
     
     
     r3 = requests.get('https://www.webopskrifter.dk/' + searchRecipe)
@@ -128,6 +128,12 @@ def search_for_recipes_by_ingredient():
     
     for sp in soup.find_all('div', class_="instructions-text"):
             print(sp.text)
+            
+def get_price_of_ingredients():
+    """
+    This method is used to calculate the price of the ingredients from the recipe selected by the method search_for_recipes_by_ingredient()
+    """
+    #Vi skal lave en metode der tager ingredienserne fra recipe_ingredients.csv og matcher dem med ingredienser fra filen ingredients_prices.csv for at finde prisen og printer dem.
         
 
     
