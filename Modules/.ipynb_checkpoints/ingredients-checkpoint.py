@@ -107,7 +107,7 @@ def search_for_recipes_by_ingredient():
         Meassurement.append(sp.text)
 
     for sp in soup.find_all('span',class_='ingredientName'):
-        Ingredient.append(sp.text)
+        Ingredient.append(sp.text.capitalize())
         
     #Vi skal gemme ingredienserne i en Dictionary, så vi kan bruge dem til at søge på f.eks. nemlig.com og hente priser 
     #for de individuelle ingredienser, på den måde kan vi både vise prisen for hver enkelt ingrediens og vise summen af 
