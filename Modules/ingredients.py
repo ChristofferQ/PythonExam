@@ -48,6 +48,9 @@ def search_for_recipes_by_ingredient():
     
     #Bruger input til at angive hvilken key vi søger efter, så vi kan sætte dens value som variablen insert_ der bruges efterfølgende til at finde opskrift siden
     searchIngredient = ingredientsDict[input("Your ingredient: ")]
+    
+    #This is horrible, don't keep it 
+    print('')
 
     r2 = requests.get('https://www.webopskrifter.dk/' + searchIngredient)
     r2.raise_for_status()
@@ -71,6 +74,9 @@ def search_for_recipes_by_ingredient():
     #Lav en ny dictionary med key = i og value = url til de enkelte opskrifter
     for i in range(len(Keys2)):
         recipesDict[Keys2[i]] = Values2[i]
+    
+    #This is horrible, don't keep it 
+    print('')
         
     
     
@@ -83,15 +89,45 @@ def search_for_recipes_by_ingredient():
     r3.raise_for_status()
     soup = bs4.BeautifulSoup(r3.content, 'html.parser')
     
-    for sp in soup.find_all('li',itemprop="recipeIngredient"):
-        print(sp.text)
+        #Outcommenting this for now, to use lists instead, so we can save itto a csv file
+        #for sp in soup.find_all('li',itemprop="recipeIngredient"):
+        #    print(sp.text)
+
+        #for sp in soup.find_all('div', class_="instructions-text"):
+        #    print(sp.text)
         
-    for sp in soup.find_all('div', class_="instructions-text"):
-        print(sp.text)
+    Ingredient = []
+    Unit = []
+    Meassurement = []
+    
+    for sp in soup.find_all('span',class_='unit'):
+        Unit.append(sp.text)
+    
+    for sp in soup.find_all('span',class_='num'):
+        Meassurement.append(sp.text)
+
+    for sp in soup.find_all('span',class_='ingredientName'):
+        Ingredient.append(sp.text)
         
     #Vi skal gemme ingredienserne i en Dictionary, så vi kan bruge dem til at søge på f.eks. nemlig.com og hente priser 
     #for de individuelle ingredienser, på den måde kan vi både vise prisen for hver enkelt ingrediens og vise summen af 
     #hele indkøbet 
+    
+    #This is horrible, don't keep it 
+    print('')
+    
+    import pandas as pd
+
+    #Lists from earlier, Meassurement, Unit, Ingredient
+
+    df = pd.DataFrame(list(zip(*[Meassurement, Unit, Ingredient])), columns = ['Meassurement', 'Unit', 'Ingredient'])
+
+    df.to_csv('./Data/recipe_ingredients.csv', index=False)
+
+    print(df)
+    
+    for sp in soup.find_all('div', class_="instructions-text"):
+            print(sp.text)
         
 
     
