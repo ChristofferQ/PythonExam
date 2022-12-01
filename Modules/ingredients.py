@@ -134,6 +134,25 @@ def get_price_of_ingredients():
     This method is used to calculate the price of the ingredients from the recipe selected by the method search_for_recipes_by_ingredient()
     """
     #Vi skal lave en metode der tager ingredienserne fra recipe_ingredients.csv og matcher dem med ingredienser fra filen ingredients_prices.csv for at finde prisen og printer dem.
-        
+    import csv
+    import pandas as pd
+
+    data = pd.read_csv('./Data/recipe_ingredients.csv')
+    content = []
+
+    for item in (data['Ingredient']):
+        content.append(item)
+
+    csv_file = csv.reader(open('./Data/ingredients_prices.csv', 'r'), delimiter=",")
+
+
+    for row in csv_file:
+        for item in content:
+            if item == row[0]:
+                print(row)
+                
+    #Denne tager ikke højde for små bogstaver, det er et problem, da vores metode search_for_recipes_by_ingredient() gemmer ingrediens navnene med småt. Det skal fikses før denne virker. 
+    #Der tages heller ikke højde for at nogle ingredienser kan mangle, der måtte den gerne vise navnet på manglende ingrediens, så vi kan få det tilføjet. 
+
 
     

@@ -1,24 +1,24 @@
-Ingredient, Price
+Ingredient, Prices
 Grøntsager, 10
 Kartofler, 20
 Squash, 30
-Avocado, 40
-Aubergine,50
-Spinat, 60
-Kål, 70
-Rodfrugter, 80
-Græskar, 90
-Broccoli, 100
-Peberfrugt, 110
-Tomater,120
-Porrer, 130
-Bønner, 140
-Ramsløg, 150
-Asparges, 160
-Svampe, 170
-Agurk, 180
-Fennikel, 190
-Blomkål, 200
+Avocado
+Aubergine
+Spinat
+Kål
+Rodfrugter
+Græskar
+Broccoli
+Peberfrugt
+Tomater
+Porrer
+Bønner
+Ramsløg
+Asparges
+Svampe
+Agurk
+Fennikel
+Blomkål
 Grøntsagsfrikadeller
 Grøntsager i ovn
 Grøntsager på panden
@@ -107,4 +107,5 @@ Risotto
 Opskrifter med nudler
 Edamamebønner
 Kikærter
-
+Sukker
+Smør
