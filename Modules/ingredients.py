@@ -142,8 +142,29 @@ def get_price_of_ingredients():
     result = pd.merge(df1,df2)
 
     print(result)
+    
+    show_price_of_ingredients(result)
                 
     #Der tages ikke ikke højde for at nogle ingredienser kan mangle, der måtte den gerne vise navnet på manglende ingrediens, så vi kan få det tilføjet. 
 
+def show_price_of_ingredients(data):
+    """
+    Given a dataframe, show bar plot
+    """
+    import pandas as pd 
+    import matplotlib.pyplot as plt
+    
+    result = data
 
+    Ingredient = result['Ingredient']
+    Price = result.iloc[:,1]
+
+    plt.bar(Ingredient,Price)
+    plt.xlabel("Ingredients")
+    plt.ylabel("Priser")
+    plt.title("Show me the money!")
+
+
+    plt.show()
+    
     
