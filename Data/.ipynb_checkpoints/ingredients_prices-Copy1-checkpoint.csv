@@ -2,111 +2,90 @@ Ingredient, Price
 Grøntsager, 10
 Kartofler, 20
 Squash, 30
-Avocado
-Aubergine
-Spinat
-Kål
-Rodfrugter
-Græskar
-Broccoli
-Peberfrugt
-Tomater
-Porrer
-Bønner
-Ramsløg
-Asparges
-Svampe
-Agurk
-Fennikel
-Blomkål
-Grøntsagsfrikadeller
-Grøntsager i ovn
-Grøntsager på panden
-Ost
-Rygeost
-Hytteost
-Chili
-Frugt
-Hyldeblomst
-Rabarber
-Frugttærte
-Bær
-Melon
-Frugtsalat
-Marmelade
-Pærer
-Ananas
-Bananer
-Mango
-Æbler
-Blommer
-Appelsin
-Granatæble
-Fjerkræ
-Kylling
-And
-Kalkun
-Krydderurter
-Mynte
-Basilikum
-Persille
-Quinoa
-Ingefær
-Skyr
-Fiskeopskrifter
-Laks
-Torsk
-Tun
-Hellefisk
-Skaldyr
-Makrel
-Fiskesuppe
-Rødspætter
-Fiskeopskrifter til børn
-Fiskefrikadeller
-Stenbiderrogn
-Fisk i ovn
-Forretter med fisk
-Pasta
-Spaghetti
-Pastasalat
-Pastaretter med kylling
-Pastaretter med spinat
-Pasta med bacon
-Pastaretter med laks
-One pot pasta
-Pasta i ovn
-Mad med øl
-Lakrids
-Couscous
-Nutella
-Kødretter
-Oksekød
-Svinekød
-Lam
-Mørbrad
-Vildt
-Pølser
-Kødsovs
-Koteletter
-Kalvekød
-Bøf opskrifter
-Bacon
-Kødboller
-Hakket oksekød & bacon
-Æg
-Æggekage
-Omelet
-Røræg
-Spejlæg
-Æggesalat
-Æggemuffins
-Opskrifter med Ris
-Risretter
-Risotto
-Opskrifter med nudler
-Edamamebønner
-Kikærter
-Smør
-Vand
-Salt
+Avocado, 40
+Aubergine, 50
+Spinat, 60
+Kål, 70
+Rodfrugter, 80
+Græskar, 90
+Broccoli, 100
+Peberfrugt, 110
+Tomater, 120
+Porrer, 130
+Bønner, 140
+Ramsløg, 150
+Asparges, 160
+Svampe, 170
+Agurk, 180
+Fennikel, 190
+Blomkål, 200
+Ost, 210
+Rygeost, 220
+Hytteost, 230
+Chili, 240
+Frugt, 250
+Hyldeblomst, 260
+Rabarber, 270
+Bær, 280
+Melon, 290
+Marmelade, 300
+Pærer, 310
+Ananas, 320
+Bananer, 330
+Mango, 340
+Æbler, 350
+Blommer, 360
+Appelsin, 370
+Granatæble, 380
+Fjerkræ, 390
+Kylling, 400
+And, 410
+Kalkun, 420
+Krydderurter, 430
+Mynte, 440
+Basilikum, 450
+Persille, 460
+Quinoa, 470
+Ingefær, 480
+Skyr, 490
+Laks, 500
+Torsk, 510
+Tun, 520
+Hellefisk, 530
+Skaldyr, 540
+Makrel, 550
+Fiskesuppe, 560
+Rødspætter, 570
+Stenbiderrogn, 580
+Pasta, 590
+Spaghetti, 600
+Pastasalat, 610
+Lakrids, 620
+Couscous, 630
+Nutella, 640
+Oksekød, 650
+Svinekød, 660
+Lam, 670
+Mørbrad, 680
+Vildt, 690
+Pølser, 700
+Kødsovs, 710
+Koteletter, 720
+Kalvekød, 730
+Bacon, 740
+Kødboller, 750
+Æg, 760
+Æggekage, 770
+Omelet, 780
+Røræg, 790
+Spejlæg, 800
+Æggesalat, 810
+Æggemuffins, 820
+Risretter, 830
+Risotto, 840
+Edamamebønner, 850
+Kikærter, 860
+Smør, 870
+Vand, 880
+Salt, 890
+Sukker, 900
