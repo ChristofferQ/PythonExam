@@ -214,7 +214,7 @@ def show_nourishment_of_ingredients(data):
     import pandas as pd 
     import matplotlib.pyplot as plt
     
-    result = data['Kcal']
+    result = data
 
     Ingredient = result['Ingredient']
     Kcal = result.iloc[:,1]
