@@ -20,6 +20,7 @@ def search_for_recipes_by_ingredient():
     """
     import bs4
     import requests
+    import pandas as pd
     
     r = requests.get('https://www.webopskrifter.dk/503/')
     r.raise_for_status()
@@ -100,14 +101,24 @@ def search_for_recipes_by_ingredient():
     Unit = []
     Meassurement = []
     
-    for sp in soup.find_all('span',class_='unit'):
-        Unit.append(sp.text)
-    
-    for sp in soup.find_all('span',class_='num'):
-        Meassurement.append(sp.text)
+    soup1 = soup.find_all('li',{'class':'ingredient'})
 
-    for sp in soup.find_all('span',class_='ingredientName'):
-        Ingredient.append(sp.text.capitalize())
+    for item in soup1:
+
+        try:
+            Meassurement.append(item.find('span', class_="num").text)
+        except:
+            Meassurement.append(None)
+
+        try:
+            Unit.append(item.find('span',class_='unit').text)
+        except:
+            Unit.append(None)
+
+        try:
+            Ingredient.append(item.find('span',class_='ingredientName').text.capitalize())
+        except:
+            Ingredient.append(None)
         
     #Vi skal gemme ingredienserne i en Dictionary, så vi kan bruge dem til at søge på f.eks. nemlig.com og hente priser 
     #for de individuelle ingredienser, på den måde kan vi både vise prisen for hver enkelt ingrediens og vise summen af 
@@ -116,7 +127,7 @@ def search_for_recipes_by_ingredient():
     #This is horrible, don't keep it 
     print('')
     
-    import pandas as pd
+
 
     #Lists from earlier, Meassurement, Unit, Ingredient
 
@@ -158,13 +169,27 @@ def show_price_of_ingredients(data):
 
     Ingredient = result['Ingredient']
     Price = result.iloc[:,1]
+    
+    fig = plt.figure(figsize = (10, 5))
 
     plt.bar(Ingredient,Price)
+    
+    add_labels(Ingredient, Price)
+    
+    plt.title("Show me the money!")
     plt.xlabel("Ingredients")
     plt.ylabel("Priser")
-    plt.title("Show me the money!")
 
-
+    
     plt.show()
+    
+def add_labels(x,y):
+    """
+    Add labels to barplot.
+    """
+    import matplotlib.pyplot as plt
+    
+    for i in range(len(x)):
+        plt.text(i, y[i], y[i], ha = 'center')
     
     
