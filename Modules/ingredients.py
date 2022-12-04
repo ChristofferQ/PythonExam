@@ -205,12 +205,33 @@ def get_nourishment_for_ingredients():
 
     print(result)
     
-    #show_nourishment_of_ingredients(result)
+    show_nourishment_of_ingredients(result)
     
 def show_nourishment_of_ingredients(data):
     """
     TBD
     """
+    import pandas as pd 
+    import matplotlib.pyplot as plt
+    
+    result = data['Kcal']
+
+    Ingredient = result['Ingredient']
+    Kcal = result.iloc[:,1]
+    
+    fig = plt.figure(figsize = (10, 5))
+
+    plt.bar(Ingredient,Kcal)
+    
+    add_labels(Ingredient,Kcal)
+    
+    plt.title("Show me the Ermin!")
+    plt.xlabel("Ingredients")
+    plt.ylabel("Kcal")
+
+    
+    plt.show()
+    
     
 def get_price_and_nourishment_for_ingredients():
     """
