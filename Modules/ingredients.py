@@ -11,6 +11,47 @@ def get_all_ingredients():
 
     for sp in soup.find_all('span',itemprop="name"):
             print(sp.text)
+            
+def save_recipe(key, Dict):
+    """
+    This function is used to save the given recipe by key.
+    """
+    import bs4
+    import requests
+    import pandas as pd
+    
+    searchRecipe = Dict[key]
+    
+    r = requests.get('https://www.webopskrifter.dk/' + searchRecipe)
+    r.raise_for_status()
+    soup = bs4.BeautifulSoup(r.content, 'html.parser')
+        
+    Ingredient = []
+    Unit = []
+    Meassurement = []
+    
+    soup1 = soup.find_all('li',{'class':'ingredient'})
+
+    for item in soup1:
+
+        try:
+            Meassurement.append(item.find('span', class_="num").text)
+        except:
+            Meassurement.append(None)
+
+        try:
+            Unit.append(item.find('span',class_='unit').text)
+        except:
+            Unit.append(None)
+
+        try:
+            Ingredient.append(item.find('span',class_='ingredientName').text.capitalize())
+        except:
+            Ingredient.append(None)
+
+    df = pd.DataFrame(list(zip(*[Meassurement, Unit, Ingredient])), columns = ['Meassurement', 'Unit', 'Ingredient'])
+
+    df.to_csv('./Data/Recipe' +str(key)+ '.csv', index=False)
 
             
 def search_for_recipes_by_ingredient():
@@ -46,7 +87,7 @@ def search_for_recipes_by_ingredient():
     #Tilføjer vores values og keys til dictionary
     for i in range(len(Keys)):
         ingredientsDict[Keys[i]] = Values[i]
-    
+        
     #Bruger input til at angive hvilken key vi søger efter, så vi kan sætte dens value som variablen insert_ der bruges efterfølgende til at finde opskrift siden
     searchIngredient = ingredientsDict[input("Your ingredient: ")]
     
@@ -75,6 +116,12 @@ def search_for_recipes_by_ingredient():
     #Lav en ny dictionary med key = i og value = url til de enkelte opskrifter
     for i in range(len(Keys2)):
         recipesDict[Keys2[i]] = Values2[i]
+     
+    #Gemmer top tre recipes i adskilte filer
+    save_recipe(1, recipesDict)
+    save_recipe(2, recipesDict)
+    save_recipe(3, recipesDict)
+    
     
     #This is horrible, don't keep it 
     print('')
