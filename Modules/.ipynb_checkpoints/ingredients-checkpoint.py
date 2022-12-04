@@ -198,8 +198,8 @@ def get_nourishment_for_ingredients():
     """
     import pandas as pd
 
-    df1 = pd.read_csv('./Data/recipe_ingredients.csv')
-    df2 = pd.read_csv('./Data/ingredients_nourishment.csv')
+    df1 = pd.read_csv('./Data/ingredients_nourishment.csv')
+    df2 = pd.read_csv('./Data/recipe_ingredients.csv')
 
     result = pd.merge(df1,df2)
 
