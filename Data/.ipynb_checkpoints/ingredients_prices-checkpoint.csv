@@ -1,109 +1,114 @@
-Ingredient, Price
-Grøntsager, 10
-Kartofler, 20
-Squash, 30
-Avocado, 40
-Aubergine, 50
-Spinat, 60
-Kål, 70
-Rodfrugter, 80
-Græskar, 90
-Broccoli, 100
-Peberfrugt, 110
-Tomater, 120
-Porrer, 130
-Bønner, 140
-Ramsløg, 150
-Asparges, 160
-Svampe, 170
-Agurk, 180
-Fennikel, 190
-Blomkål, 200
-Ost, 210
-Rygeost, 220
-Hytteost, 230
-Chili, 240
-Frugt, 250
-Hyldeblomst, 260
-Rabarber, 270
-Bær, 280
-Melon, 290
-Marmelade, 300
-Pærer, 310
-Ananas, 320
-Bananer, 330
-Mango, 340
-Æbler, 350
-Blommer, 360
-Appelsin, 370
-Granatæble, 380
-Fjerkræ, 390
-Kylling, 400
-And, 410
-Kalkun, 420
-Krydderurter, 430
-Mynte, 440
-Basilikum, 450
-Persille, 460
-Quinoa, 470
-Ingefær, 480
-Skyr, 490
-Laks, 500
-Torsk, 510
-Tun, 520
-Hellefisk, 530
-Skaldyr, 540
-Makrel, 550
-Fiskesuppe, 560
-Rødspætter, 570
-Stenbiderrogn, 580
-Pasta, 590
-Spaghetti, 600
-Pastasalat, 610
-Lakrids, 620
-Couscous, 630
-Nutella, 640
-Oksekød, 650
-Svinekød, 660
-Lam, 670
-Mørbrad, 680
-Vildt, 690
-Pølser, 700
-Kødsovs, 710
-Koteletter, 720
-Kalvekød, 730
-Bacon, 740
-Kødboller, 750
-Æg, 760
-Æggekage, 770
-Omelet, 780
-Røræg, 790
-Spejlæg, 800
-Æggesalat, 810
-Æggemuffins, 820
-Risretter, 830
-Risotto, 840
-Edamamebønner, 850
-Kikærter, 860
-Smør, 870
-Vand, 880
-Salt, 890
-Sukker, 900
-Løg, 910
-Paprika, 930
-Tomatpuré, 940
-Mælk, 950
-Fløde, 960
-Peber, 970
-Purløg, 980
-Ærter, 990
-Hvidløg, 1000
-Olie, 1010
-Hakkede tomater, 1020
-Oregano, 1030
-Timian, 1040
-Rosmarin, 1050
-Chiliflager, 1060
-Parmesanost, 1070
-Frisk Basilikum, 1080
-
+Ingredient,Price
+Grøntsager,16
+Kartofler,67
+Squash,79
+Avocado,37
+Aubergine,18
+Spinat,14
+Kål,91
+Rodfrugter,55
+Græskar,29
+Broccoli,62
+Peberfrugt,26
+Tomater,47
+Porrer,73
+Bønner,86
+Ramsløg,84
+Asparges,34
+Svampe,92
+Agurk,15
+Fennikel,88
+Blomkål,30
+Ost,29
+Rygeost,27
+Hytteost,41
+Chili,22
+Frugt,30
+Hyldeblomst,43
+Rabarber,26
+Bær,74
+Melon,32
+Marmelade,51
+Pærer,16
+Ananas,24
+Bananer,52
+Mango,15
+Æbler,13
+Blommer,55
+Appelsin,70
+Granatæble,98
+Fjerkræ,62
+Kylling,31
+And,50
+Kalkun,87
+Krydderurter,9
+Mynte,22
+Basilikum,66
+Persille,29
+Quinoa,6
+Ingefær,71
+Skyr,93
+Laks,49
+Torsk,66
+Tun,64
+Hellefisk,94
+Skaldyr,99
+Makrel,26
+Fiskesuppe,18
+Rødspætter,75
+Stenbiderrogn,81
+Pasta,104
+Spaghetti,79
+Pastasalat,26
+Lakrids,49
+Couscous,45
+Nutella,47
+Oksekød,10
+Svinekød,27
+Lam,76
+Mørbrad,110
+Vildt,5
+Pølser,19
+Kødsovs,37
+Koteletter,47
+Kalvekød,28
+Bacon,77
+Kødboller,47
+Æg,30
+Æggekage,23
+Omelet,34
+Røræg,100
+Spejlæg,43
+Æggesalat,57
+Æggemuffins,49
+Risretter,86
+Risotto,94
+Edamamebønner,107
+Kikærter,56
+Smør,44
+Vand,50
+Salt,35
+Sukker,28
+Løg,77
+Paprika,110
+Tomatpuré,84
+Mælk,18
+Fløde,43
+Peber,36
+Purløg,74
+Ærter,30
+Hvidløg,29
+Olie,87
+Hakkede tomater,15
+Oregano,17
+Timian,16
+Rosmarin,28
+Chiliflager,107
+Parmesanost,29
+Frisk Basilikum,52
+Søde kartofler,
+Rødløg,
+Revet cheddarost,
+Creme fraiche,
+Limefrugt,
+Avocadoer,

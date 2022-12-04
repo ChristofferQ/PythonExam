@@ -140,7 +140,7 @@ def search_for_recipes_by_ingredient():
     for sp in soup.find_all('div', class_="instructions-text"):
             print(sp.text)
             
-def get_price_of_ingredients():
+def get_price_of_ingredients(csv_file):
     """
     This method is used to calculate the price of the ingredients from the recipe selected by the method search_for_recipes_by_ingredient()
     """
@@ -148,7 +148,7 @@ def get_price_of_ingredients():
     import pandas as pd
 
     df1 = pd.read_csv('./Data/ingredients_prices.csv')
-    df2 = pd.read_csv('./Data/recipe_ingredients.csv')
+    df2 = pd.read_csv('./Data/' + csv_file + '.csv')
 
     result = pd.merge(df1,df2)
 
@@ -192,14 +192,14 @@ def add_labels(x,y):
     for i in range(len(x)):
         plt.text(i, y[i], y[i], ha = 'center')
         
-def get_nourishment_for_ingredients():
+def get_nourishment_for_ingredients(csv_file):
     """
     
     """
     import pandas as pd
 
     df1 = pd.read_csv('./Data/ingredients_nourishment.csv')
-    df2 = pd.read_csv('./Data/recipe_ingredients.csv')
+    df2 = pd.read_csv('./Data/' + csv_file + '.csv')
 
     result = pd.merge(df1,df2)
 
