@@ -12,6 +12,8 @@ def get_all_ingredients():
     for sp in soup.find_all('span',itemprop="name"):
             print(sp.text)
             
+#__________________________________________________________________________________________________________________________________________
+            
 def save_recipe(key, Dict):
     """
     This function is used to save the given recipe by key.
@@ -52,7 +54,8 @@ def save_recipe(key, Dict):
     df = pd.DataFrame(list(zip(*[Meassurement, Unit, Ingredient])), columns = ['Meassurement', 'Unit', 'Ingredient'])
 
     df.to_csv('./Data/Recipe' +str(key)+ '.csv', index=False)
-
+    
+#__________________________________________________________________________________________________________________________________________
             
 def search_for_recipes_by_ingredient():
     """
@@ -187,6 +190,8 @@ def search_for_recipes_by_ingredient():
     for sp in soup.find_all('div', class_="instructions-text"):
             print(sp.text)
             
+#__________________________________________________________________________________________________________________________________________
+            
 def get_price_of_ingredients(csv_file):
     """
     This method is used to calculate the price of the ingredients from the recipe selected by the method search_for_recipes_by_ingredient()
@@ -203,7 +208,9 @@ def get_price_of_ingredients(csv_file):
     
     show_price_of_ingredients(result)
                 
-    #Der tages ikke ikke højde for at nogle ingredienser kan mangle, der måtte den gerne vise navnet på manglende ingrediens, så vi kan få det tilføjet. 
+    #Der tages ikke ikke højde for at nogle ingredienser kan mangle, der måtte den gerne vise navnet på manglende ingrediens, så vi kan få det tilføjet.
+    
+#__________________________________________________________________________________________________________________________________________
 
 def show_price_of_ingredients(data):
     """
@@ -230,6 +237,8 @@ def show_price_of_ingredients(data):
     
     plt.show()
     
+#__________________________________________________________________________________________________________________________________________
+    
 def add_labels(x,y):
     """
     Add labels to barplot.
@@ -238,6 +247,8 @@ def add_labels(x,y):
     
     for i in range(len(x)):
         plt.text(i, y[i], y[i], ha = 'center')
+        
+#__________________________________________________________________________________________________________________________________________
         
 def get_nourishment_for_ingredients(csv_file):
     """
@@ -253,6 +264,8 @@ def get_nourishment_for_ingredients(csv_file):
     print(result)
     
     show_nourishment_of_ingredients(result)
+    
+#__________________________________________________________________________________________________________________________________________
     
 def show_nourishment_of_ingredients(data):
     """
@@ -279,6 +292,8 @@ def show_nourishment_of_ingredients(data):
     
     plt.show()
     
+#__________________________________________________________________________________________________________________________________________
+    
     
 def get_price_and_nourishment_for_ingredients():
     """
@@ -295,6 +310,8 @@ def get_price_and_nourishment_for_ingredients():
     print(result)
     
     #show_nourishment_and_price_of_ingredient(result)
+    
+#__________________________________________________________________________________________________________________________________________
     
 def show_nourishment_and_price_of_ingredient(data):
     """
