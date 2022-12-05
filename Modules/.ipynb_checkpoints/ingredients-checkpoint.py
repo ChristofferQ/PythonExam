@@ -16,7 +16,7 @@ def get_all_ingredients():
             
 def save_recipe(key, Dict):
     """
-    This function is used to save the given recipe by key.
+    This function is used to save the given recipe by key as csv file. 
     """
     import bs4
     import requests
@@ -191,38 +191,44 @@ def search_for_recipes_by_ingredient():
             print(sp.text)
             
 #__________________________________________________________________________________________________________________________________________
-            
-def get_price_of_ingredients(csv_file):
-    """
-    This method is used to calculate the price of the ingredients from the recipe selected by the method search_for_recipes_by_ingredient()
-    """
-    #Vi skal lave en metode der tager ingredienserne fra recipe_ingredients.csv og matcher dem med ingredienser fra filen ingredients_prices.csv for at finde prisen og printer dem.
-    import pandas as pd
 
+def merge_price(csv_file):
+    """
+    This function merges the given file with ingredients_prices.csv and returns the result.
+    """
+    import pandas as pd
+    
     df1 = pd.read_csv('./Data/ingredients_prices.csv')
     df2 = pd.read_csv('./Data/' + csv_file + '.csv')
-
-    result = pd.merge(df1,df2)
-
-    print(result)
     
+    result = pd.merge(df1,df2)
+    
+    return result
+
+#__________________________________________________________________________________________________________________________________________
+
+def get_price_of_ingredients(csv_file):
+    """
+    This function uses merge_price() to get ingredients individual price and show_price_of_ingredients() to display the result.
+    """
+    import pandas as pd
+
+    result = merge_price(csv_file)
     show_price_of_ingredients(result)
-                
-    #Der tages ikke ikke højde for at nogle ingredienser kan mangle, der måtte den gerne vise navnet på manglende ingrediens, så vi kan få det tilføjet.
     
 #__________________________________________________________________________________________________________________________________________
 
 def show_price_of_ingredients(data):
     """
-    Given a dataframe, show bar plot
+    This function displays the data from the given dataset by printing it and displaying it in a bar chart.
     """
     import pandas as pd 
     import matplotlib.pyplot as plt
     
-    result = data
+    print(data)
 
-    Ingredient = result['Ingredient']
-    Price = result.iloc[:,1]
+    Ingredient = data['Ingredient']
+    Price = data.iloc[:,1]
     
     fig = plt.figure(figsize = (10, 5))
 
@@ -249,35 +255,44 @@ def add_labels(x,y):
         plt.text(i, y[i], y[i], ha = 'center')
         
 #__________________________________________________________________________________________________________________________________________
-        
-def get_nourishment_for_ingredients(csv_file):
+
+def merge_nourishment(csv_file):
     """
-    
+    This function merges the given file with ingredients_nourishment.csv and returns the result.
     """
     import pandas as pd
 
     df1 = pd.read_csv('./Data/ingredients_nourishment.csv')
     df2 = pd.read_csv('./Data/' + csv_file + '.csv')
 
-    result = pd.merge(df1,df2)
-
-    print(result)
+    result = pd.merge(df1,df2) 
     
+    return result
+    
+#__________________________________________________________________________________________________________________________________________
+
+def get_nourishment_of_ingredients(csv_file):
+    """
+    This function uses merge_nourishment() to get ingredients individual nourishment and show_nourishment_of_ingredients() to display the result.
+    """
+    import pandas as pd
+
+    result = merge_nourishment(csv_file)
     show_nourishment_of_ingredients(result)
     
 #__________________________________________________________________________________________________________________________________________
     
 def show_nourishment_of_ingredients(data):
     """
-    TBD
+    This function displays the data from the given dataset by printing it and displaying it in a bar chart.
     """
     import pandas as pd 
     import matplotlib.pyplot as plt
     
-    result = data
+    print(data)
 
-    Ingredient = result['Ingredient']
-    Kcal = result.iloc[:,1]
+    Ingredient = data['Ingredient']
+    Kcal = data.iloc[:,1]
     
     fig = plt.figure(figsize = (10, 5))
 
@@ -317,4 +332,28 @@ def show_nourishment_and_price_of_ingredient(data):
     """
     Vær's'god Ermin
     """
+    
+#__________________________________________________________________________________________________________________________________________
+
+def calculate_price_of_top_three(csv_file1, csv_file2, csv_file3):
+    """
+    This function calculates the sum of price and the sum of Kcal in the three recipes given as an argument.
+    """
+    import pandas as pd
+    
+    price_1 = merge_price(csv_file1)     
+    price_2 = merge_price(csv_file2)
+    price_3 = merge_price(csv_file3)  
+
+    print(price_1["Price"].sum())
+    print(price_2["Price"].sum())
+    print(price_3["Price"].sum())
+    
+    nourish_1 = merge_nourishment(csv_file1)
+    nourish_2 = merge_nourishment(csv_file2)
+    nourish_3 = merge_nourishment(csv_file3)
+    
+    print(nourish_1["Kcal"].sum())
+    print(nourish_2["Kcal"].sum())
+    print(nourish_3["Kcal"].sum())
     
