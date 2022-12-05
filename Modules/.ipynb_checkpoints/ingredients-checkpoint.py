@@ -337,23 +337,66 @@ def show_nourishment_and_price_of_ingredient(data):
 
 def calculate_price_of_top_three(csv_file1, csv_file2, csv_file3):
     """
-    This function calculates the sum of price and the sum of Kcal in the three recipes given as an argument.
+    This function calculates the sum of price in the three recipes given as an argument.
     """
+    import numpy as np
     import pandas as pd
+    import matplotlib.pyplot as plt
     
     price_1 = merge_price(csv_file1)     
     price_2 = merge_price(csv_file2)
     price_3 = merge_price(csv_file3)  
 
-    print(price_1["Price"].sum())
-    print(price_2["Price"].sum())
-    print(price_3["Price"].sum())
+    price_sum1 = price_1["Price"].sum()
+    price_sum2 = price_2["Price"].sum()
+    price_sum3 =price_3["Price"].sum()
+    
+    #values =sorted(np.array([price_sum1, price_sum2,price_sum3]))
+    values =np.array([price_sum1, price_sum2,price_sum3])
+    labels = ["recipe1", "recipe2","recipe3"]
+    colors = ["sandybrown", "palevioletred","indigo"]
+
+    plt.pie(values, labels = labels, colors = colors, autopct=make_autopct(values), shadow=True)
+    plt.title("Recipe prices")
+    #plt.legend()
+    plt.show() 
+
+#__________________________________________________________________________________________________________________________________________
+
+def calculate_nourishment_of_top_three(csv_file1, csv_file2, csv_file3):
+    """
+    This function calculates the sum of nourishment in the three recipes given as an argument.
+    """
+    import numpy as np
+    import pandas as pd
+    import matplotlib.pyplot as plt
     
     nourish_1 = merge_nourishment(csv_file1)
     nourish_2 = merge_nourishment(csv_file2)
     nourish_3 = merge_nourishment(csv_file3)
     
-    print(nourish_1["Kcal"].sum())
-    print(nourish_2["Kcal"].sum())
-    print(nourish_3["Kcal"].sum())
+    nourish_sum1 = nourish_1["Kcal"].sum()
+    nourish_sum2 = nourish_2["Kcal"].sum()
+    nourish_sum3 = nourish_3["Kcal"].sum()
     
+    values = np.array([nourish_sum1, nourish_sum2, nourish_sum3])
+    labels = ["recipe1", "recipe2","recipe3"]
+    colors = ["sandybrown", "palevioletred","indigo"]
+    
+    plt.pie(values, labels = labels, colors = colors, autopct=make_autopct(values), shadow=True)
+    plt.title("Recipe nourishment")
+    #plt.legend()
+    plt.show() 
+    
+#__________________________________________________________________________________________________________________________________________
+
+def make_autopct(values):
+    """
+    This is a helper function to display values in a pie chart.
+    """
+    import matplotlib.pyplot as plt
+    def my_autopct(pct):
+        total = sum(values)
+        val = int(round(pct*total/100.0))
+        return '{p:.2f}%  ({v:d})'.format(p=pct,v=val)
+    return my_autopct
