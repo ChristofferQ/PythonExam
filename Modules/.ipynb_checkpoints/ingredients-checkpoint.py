@@ -65,6 +65,7 @@ def search_for_recipes_by_ingredient():
     import bs4
     import requests
     import pandas as pd
+    from Modules.populate_data import populate_missing_ingredients
     
     r = requests.get('https://www.webopskrifter.dk/503/')
     r.raise_for_status()
@@ -189,6 +190,9 @@ def search_for_recipes_by_ingredient():
     
     for sp in soup.find_all('div', class_="instructions-text"):
             print(sp.text)
+            
+    populate_missing_ingredients()
+    
             
 #__________________________________________________________________________________________________________________________________________
 
