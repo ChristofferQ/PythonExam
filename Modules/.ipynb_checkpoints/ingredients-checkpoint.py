@@ -237,9 +237,10 @@ def show_price_of_ingredients(data):
     add_labels(Ingredient, Price)
     
     plt.title("Show me the money!")
+    
     plt.xlabel("Ingredients")
     plt.ylabel("Priser")
-
+    plt.xticks(rotation='vertical')
     
     plt.show()
     
@@ -303,6 +304,7 @@ def show_nourishment_of_ingredients(data):
     plt.title("Show me the Ermin!")
     plt.xlabel("Ingredients")
     plt.ylabel("Kcal")
+    plt.xticks(rotation='vertical')
 
     
     plt.show()
