@@ -296,7 +296,7 @@ def show_nourishment_of_ingredients(data):
     
     fig = plt.figure(figsize = (10, 5))
 
-    plt.bar(Ingredient,Kcal)
+    plt.bar(Ingredient,Kcal, color = "sandybrown")
     
     add_labels(Ingredient,Kcal)
     
@@ -354,7 +354,7 @@ def calculate_price_of_top_three(csv_file1, csv_file2, csv_file3):
     #values =sorted(np.array([price_sum1, price_sum2,price_sum3]))
     values =np.array([price_sum1, price_sum2,price_sum3])
     labels = ["recipe1", "recipe2","recipe3"]
-    colors = ["sandybrown", "palevioletred","indigo"]
+    colors = ["lightskyblue", "dodgerblue","royalblue"]
 
     plt.pie(values, labels = labels, colors = colors, autopct=make_autopct(values), shadow=True)
     plt.title("Recipe prices")
@@ -381,7 +381,7 @@ def calculate_nourishment_of_top_three(csv_file1, csv_file2, csv_file3):
     
     values = np.array([nourish_sum1, nourish_sum2, nourish_sum3])
     labels = ["recipe1", "recipe2","recipe3"]
-    colors = ["sandybrown", "palevioletred","indigo"]
+    colors = ["sandybrown", "darksalmon","peru"]
     
     plt.pie(values, labels = labels, colors = colors, autopct=make_autopct(values), shadow=True)
     plt.title("Recipe nourishment")
