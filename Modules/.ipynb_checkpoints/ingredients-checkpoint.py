@@ -233,8 +233,6 @@ def show_price_of_ingredients(data):
 
     Ingredient = data['Ingredient']
     Price = data.iloc[:,1]
-    
-    fig = plt.figure(figsize = (10, 5))
 
     plt.bar(Ingredient,Price)
     
@@ -298,8 +296,6 @@ def show_nourishment_of_ingredients(data):
 
     Ingredient = data['Ingredient']
     Kcal = data.iloc[:,1]
-    
-    fig = plt.figure(figsize = (10, 5))
 
     plt.bar(Ingredient,Kcal, color = "sandybrown")
     
