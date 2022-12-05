@@ -1,157 +1,173 @@
 Ingredient,Kcal
-Grøntsager,110
-Kartofler,56
-Squash,68
-Avocado,70
-Aubergine,81
-Spinat,72
-Kål,58
-Rodfrugter,63
-Græskar,101
-Broccoli,102
-Peberfrugt,51
-Tomater,95
-Porrer,80
-Bønner,95
-Ramsløg,56
-Asparges,51
-Svampe,51
-Agurk,31
-Fennikel,49
-Blomkål,33
-Ost,87
-Rygeost,90
-Hytteost,19
-Chili,54
-Frugt,86
-Hyldeblomst,73
-Rabarber,101
-Bær,36
-Melon,33
-Marmelade,38
-Pærer,93
-Ananas,69
-Bananer,108
-Mango,82
-Æbler,103
-Blommer,37
-Appelsin,13
-Granatæble,10
-Fjerkræ,61
-Kylling,43
-And,32
-Kalkun,79
-Krydderurter,107
-Mynte,57
-Basilikum,47
-Persille,67
-Quinoa,72
-Ingefær,70
-Skyr,55
-Laks,36
-Torsk,14
-Tun,59
-Hellefisk,38
-Skaldyr,78
-Makrel,12
-Fiskesuppe,58
-Rødspætter,97
-Stenbiderrogn,92
-Pasta,31
-Spaghetti,68
-Pastasalat,76
-Lakrids,29
-Couscous,9
-Nutella,44
-Oksekød,7
-Svinekød,44
-Lam,85
-Mørbrad,83
-Vildt,65
-Pølser,6
-Kødsovs,97
-Koteletter,95
-Kalvekød,67
-Bacon,27
-Kødboller,5
-Æg,41
-Æggekage,21
-Omelet,39
-Røræg,62
-Spejlæg,64
-Æggesalat,20
-Æggemuffins,65
-Risretter,9
-Risotto,51
-Edamamebønner,94
-Kikærter,75
-Smør,66
-Vand,83
-Salt,30
-Sukker,54
-Løg,53
-Paprika,21
-Tomatpuré,81
-Mælk,56
-Fløde,72
-Peber,7
-Purløg,72
-Ærter,92
-Hvidløg,39
-Olie,7
-Hakkede tomater,80
-Oregano,66
-Timian,34
-Rosmarin,56
-Chiliflager,25
-Parmesanost,48
-Frisk Basilikum,61
-Søde kartofler,23
-Rødløg,96
-Revet cheddarost,79
-Creme fraiche,52
-Limefrugt,103
-Avocadoer,100
-Kyllingefond,86
-Sojasauce,42
-Riseddike,89
-Hoisinsauce,106
-Sesamolie,28
-Majsstivelse,44
-Chilipulver,99
-Frisk chili,92
-Kyllingeinderfilet,7
-Gulerødder,12
-Grønne bønner,39
-Champignoner,49
-Ris,98
-Akaciehonning,85
-Eddike,70
-Artiskokhjerter,31
-Cherrytomater,61
-Salat,81
-Sorte oliven,77
-Hestebønner,96
-Sennep,100
-Vaniljepulver,85
-Grovvalsede havregryn,88
-Honning,63
-Mandler,21
-Økologisk appelsin,67
-Tørrede abrikoser,108
-Gurkemeje,43
-Cayennepeber,110
-Hønsebouillon,31
-Lammekød i tern,58
-Spidskommen,61
-Stødt ingefær,28
-Olivenolie,43
-Frisk koriander,89
-Kanel,84
-Citronsaft,36
-Blåbær,30
-Kardemomme,26
-Bacontern,86
-Forårsløg,98
-Skinketern,80
-Majs,62
+Grøntsager,29
+Kartofler,32
+Squash,55
+Avocado,81
+Aubergine,80
+Spinat,19
+Kål,90
+Rodfrugter,101
+Græskar,6
+Broccoli,86
+Peberfrugt,37
+Tomater,88
+Porrer,87
+Bønner,29
+Ramsløg,11
+Asparges,35
+Svampe,55
+Agurk,94
+Fennikel,58
+Blomkål,88
+Ost,70
+Rygeost,27
+Hytteost,105
+Chili,80
+Frugt,50
+Hyldeblomst,68
+Rabarber,32
+Bær,55
+Melon,29
+Marmelade,63
+Pærer,28
+Ananas,85
+Bananer,54
+Mango,108
+Æbler,44
+Blommer,87
+Appelsin,19
+Granatæble,63
+Fjerkræ,9
+Kylling,42
+And,61
+Kalkun,58
+Krydderurter,80
+Mynte,74
+Basilikum,51
+Persille,106
+Quinoa,47
+Ingefær,46
+Skyr,73
+Laks,104
+Torsk,100
+Tun,39
+Hellefisk,8
+Skaldyr,101
+Makrel,103
+Fiskesuppe,35
+Rødspætter,12
+Stenbiderrogn,43
+Pasta,52
+Spaghetti,98
+Pastasalat,98
+Lakrids,100
+Couscous,37
+Nutella,41
+Oksekød,100
+Svinekød,80
+Lam,110
+Mørbrad,13
+Vildt,91
+Pølser,60
+Kødsovs,100
+Koteletter,83
+Kalvekød,19
+Bacon,15
+Kødboller,85
+Æg,20
+Æggekage,88
+Omelet,50
+Røræg,54
+Spejlæg,15
+Æggesalat,10
+Æggemuffins,7
+Risretter,48
+Risotto,63
+Edamamebønner,65
+Kikærter,110
+Smør,49
+Vand,64
+Salt,74
+Sukker,68
+Løg,37
+Paprika,97
+Tomatpuré,93
+Mælk,40
+Fløde,19
+Peber,44
+Purløg,78
+Ærter,107
+Hvidløg,56
+Olie,30
+Hakkede tomater,92
+Oregano,96
+Timian,8
+Rosmarin,33
+Chiliflager,9
+Parmesanost,109
+Frisk Basilikum,15
+Søde kartofler,109
+Rødløg,17
+Revet cheddarost,56
+Creme fraiche,102
+Limefrugt,51
+Avocadoer,76
+Kyllingefond,67
+Sojasauce,91
+Riseddike,72
+Hoisinsauce,32
+Sesamolie,79
+Majsstivelse,79
+Chilipulver,92
+Frisk chili,87
+Kyllingeinderfilet,110
+Gulerødder,82
+Grønne bønner,50
+Champignoner,28
+Ris,25
+Akaciehonning,14
+Eddike,26
+Artiskokhjerter,5
+Cherrytomater,51
+Salat,100
+Sorte oliven,29
+Hestebønner,11
+Sennep,86
+Vaniljepulver,28
+Grovvalsede havregryn,53
+Honning,77
+Mandler,90
+Økologisk appelsin,10
+Tørrede abrikoser,18
+Gurkemeje,81
+Cayennepeber,60
+Hønsebouillon,90
+Lammekød i tern,87
+Spidskommen,48
+Stødt ingefær,107
+Olivenolie,102
+Frisk koriander,75
+Kanel,85
+Citronsaft,59
+Blåbær,54
+Kardemomme,58
+Bacontern,55
+Forårsløg,50
+Skinketern,97
+Majs,88
+Revet parmesanost,56
+Kogt skinke,91
+Hummer,29
+Hvidvin,87
+Bouillonterning,38
+Skalotteløg,48
+Laurbærblade,107
+Fedtstof,6
+Tahin,103
+Karse,105
+Dijonsennep,48
+Mayonnaise,32
+Frugtfarve,61
+Peberfrugter,35
+Hakket kalkunkød,47
+Revet muskatnød,64
