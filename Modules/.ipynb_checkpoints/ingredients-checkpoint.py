@@ -308,33 +308,7 @@ def show_nourishment_of_ingredients(data):
 
     
     plt.show()
-    
-#__________________________________________________________________________________________________________________________________________
-    
-    
-def get_price_and_nourishment_for_ingredients():
-    """
-    Does it all baby
-    """
-    import pandas as pd
 
-    df1 = pd.read_csv('./Data/recipe_ingredients.csv')
-    df2 = pd.read_csv('./Data/ingredients_prices.csv')
-    df3 = pd.read_csv('./Data/ingredients_nourishment.csv')
-
-    result = df1.merge(df2).merge(df3)
-
-    print(result)
-    
-    #show_nourishment_and_price_of_ingredient(result)
-    
-#__________________________________________________________________________________________________________________________________________
-    
-def show_nourishment_and_price_of_ingredient(data):
-    """
-    Vær's'god Ermin
-    """
-    
 #__________________________________________________________________________________________________________________________________________
 
 def calculate_price_of_top_three(csv_file1, csv_file2, csv_file3):
